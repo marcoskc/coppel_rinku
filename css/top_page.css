@@ -1,0 +1,28 @@
+body, html {
+    margin: 0px; 
+  	padding: 0px; 
+  	height: 100%;
+  	font-family: sans-serif;
+    background: #993366;
+}
+
+#logo{
+    width:120px; 
+    padding-left: 0px; 
+}
+
+#titulo{
+    width:600px; 
+    position: absolute; 
+    left:150px; 
+    top:-10px; 
+    color:#FFF1F7;
+}
+
+#titulo2{
+  width:600px; 
+  position: absolute; 
+  left:150px; 
+  top:45px; 
+  color:white;
+}

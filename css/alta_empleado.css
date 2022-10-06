@@ -1,0 +1,38 @@
+body, html {
+    margin: 0px; 
+    padding: 0px; 
+    height: 100%;
+    font-family: sans-serif;
+    background: #FFEDF6;
+ }
+ 
+ #panel_alta{
+     width:600px; 
+     position: absolute; 
+     left:50px; 
+     top:10px; 
+     color:#464646;
+ }
+ 
+ #line_decorativo{
+     color: #FFBADD;
+ }
+ 
+ #line_decorativo2{
+     border-radius: 5px;
+     position: absolute;
+     background: #9e2662;    
+     height:10px;
+     width:600px;
+     top:60px;
+     color: #9e2662; 
+ }
+ 
+ #boton_cancelar{
+     position:relative; 
+     left:150px;
+     top:-45px;    
+     width:100px; 
+     height:28px;
+ }
+ 

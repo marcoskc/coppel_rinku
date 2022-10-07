@@ -74,7 +74,6 @@
             </ul>
             <br>
             <div id="line_decorativo">___________________________________________________________________</div><br>
-            <input type='hidden' name='idempleado' value="<?php echo $idempleado ?>">
             <input type='hidden' name='tipo_accion' value="INSERT">
             <input type="submit" value="Registrar" style="width:100px; height:28px;">
         </form>

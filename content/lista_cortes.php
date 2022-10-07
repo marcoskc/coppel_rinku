@@ -11,6 +11,8 @@
     <div id="pestanias">
         <?php
         // sacar el periodo laboral corriendo
+		$filtro = "";
+		if(isset($_POST['busqueda']) && !empty($_POST['busqueda'])) $filtro = $_POST['busqueda'];	 
         if(isset($_POST['periodo']) && !empty($_POST['periodo'])) $_SESSION['periodo'] = $_POST['periodo'];	    
 		if(isset($_SESSION['periodo']) && !empty($_SESSION['periodo']) && $_SESSION['periodo']!='1969-12-01') $fecha = date("Y-m-d",strtotime($_SESSION['periodo']));
         else $fecha = date("Y-m-d");
@@ -67,12 +69,8 @@
 			  $sql .=  "FROM cortes a LEFT JOIN empleados b ON a.idempleado=b.idempleado ";
 			  $sql .=  "WHERE a.corte>='".$fecha_inicio."' AND a.corte<'".$fecha_final."'";			  
 			  // configuraciones de filtros de busqueda
-			  $filtro = "";
-			  $post = (isset($_POST['busqueda']) && !empty($_POST['busqueda']));
-              if($post){
-				  $filtro = $_POST['busqueda'];
-				  unset($_POST);
-				  $sql .= " AND b.numero_empleado='".$filtro."' OR b.Nombre LIKE '%".$filtro."%'";
+              if($filtro != ""){
+				  $sql .= " AND (b.numero_empleado='".$filtro."' OR b.Nombre LIKE '%".$filtro."%')";
 			  }		  
 			  $result = $conexion->query($sql);	
 			  // visualizar el numero total de registros encontrados en la base de datos

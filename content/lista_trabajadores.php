@@ -5,9 +5,10 @@
     // revisar si hay datos en el array post de peticion de borrado
      $idempleado =  "";
      $tipo_accion =  "";
+	 $filtro = "";
 	 $conexion = null;
-	
 
+	 if(isset($_POST['busqueda']) && !empty($_POST['busqueda'])) $filtro = $_POST['busqueda'];	 
 	 if(isset($_POST['periodo']) && !empty($_POST['periodo']) && $_POST['periodo']!='1969-12-01') $_SESSION['periodo'] = $_POST['periodo'];	    
 	 if(isset($_SESSION['periodo']) && !empty($_SESSION['periodo']) && $_SESSION['periodo']!='1969-12-01') $fecha = date("Y-m-d",strtotime($_SESSION['periodo']));
 	 else $fecha = date("Y-m-d");
@@ -102,11 +103,7 @@
 			  $sql .=  "FROM empleados a ";
  
 			  // configuraciones de filtros de busqueda
-			  $filtro = "";
-			  $post = (isset($_POST['busqueda']) && !empty($_POST['busqueda']));
-              if($post){
-				  $filtro = $_POST['busqueda'];
-				  unset($_POST);
+              if($filtro != ""){
 				  $sql .= " WHERE numero_empleado='".$filtro."' OR Nombre LIKE '%".$filtro."%'";
 				  if(strtoupper($filtro) == "CHOFER") $sql .= " OR Rol=0";
 				  if(strtoupper($filtro) == "CARGADOR") $sql .= " OR Rol=1";

@@ -39,7 +39,7 @@
                 $sql .= $turno.","; // cubre_turno
                 $sql .= "0)"; // corte
                 $conexion->query($sql); 
-                echo "<script>window.location.replace('lista_movimientos.php'); </script>";   
+                echo "<script>window.location.replace('lista_trabajadores.php'); </script>";   
                 die();
             }
             else{
@@ -54,7 +54,7 @@
         }
      }
      else{
-        echo "<script>window.location.replace('lista_movimientos.php'); </script>";   
+        echo "<script>window.location.replace('lista_trabajadores.php'); </script>";   
         die();
      }
 ?>

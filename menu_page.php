@@ -1,13 +1,13 @@
 <html>
 
 <head>
-    <title>Menu RINKU</title>
+    <title>Menú RINKU</title>
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
     <link rel="stylesheet" type="text/css" href="css/menu_page.css" />
 </head>
 
 <body>
-    <div id='barmenu'><b>- MENU -</div>
+    <div id='barmenu'><b>- MENÚ -</div>
     <div id='menu'>
         <form method='post' action='content/lista_trabajadores.php' target='contenedor'>
             <input style='width:90px' type='image' src='resource/boton_menu_01.png' alt='Submit'>

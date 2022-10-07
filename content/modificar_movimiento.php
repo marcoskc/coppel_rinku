@@ -26,9 +26,8 @@
                 $sql .= "cantidad_entrega=".$cantidad_entrega.","; 
                 $sql .= "cubre_turno=".$turno." "; 
                 $sql .= "WHERE idmovimiento=".$idmovimiento;
-                echo '<script>alert("'.$sql.'"); </script>'; 
                 $conexion->query($sql); 
-                die();
+                echo "<script>window.location.replace('lista_movimiento.php'); </script>";  
             }
             else{
                 // sacar la informacion del empleado seleccionado para darle movimientos de entrega
@@ -42,7 +41,7 @@
         }
      }
      else{
-        echo "<script>window.location.replace('lista_movimientos.php'); </script>";   
+        echo "<script>window.location.replace('lista_movimiento.php'); </script>";   
         die();
      }
 ?>
@@ -50,14 +49,14 @@
 <html>
 
 <head>
-    <title>Administracion RINKU</title>
+    <title>Administración RINKU</title>
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
     <link rel="stylesheet" type="text/css" href="../css/alta_empleado.css" />
 </head>
 
 <body>
     <div id="panel_alta">
-        <h1>- Alta de Nuevo Movimiento</h1>
+        <h1>- Modificar Movimiento</h1>
         <?php
             $rol_str="Chofer";
             if($rol == "1") $rol_str="Cargador";
@@ -116,7 +115,7 @@
             <input type='hidden' name='tipo_accion' value="EDIT">
             <input type="submit" value="Guardar" style="width:100px; height:28px;">
         </form>
-        <form method='post' action='lista_movimientos.php' target='contenedor'>         
+        <form method='post' action='lista_movimiento.php' target='contenedor'>         
              <input id='boton_cancelar' type='submit' value='Cancelar'>
         </form>
     </div>

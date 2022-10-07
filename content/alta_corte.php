@@ -48,14 +48,14 @@
 <html>
 
 <head>
-    <title>Administracion RINKU</title>
+    <title>Administración RINKU</title>
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
     <link rel="stylesheet" type="text/css" href="../css/alta_empleado.css" />
 </head>
 
 <body>
     <div id="panel_alta">
-        <h1>- Generar Corte de Nomina</h1>
+        <h1>- Generar Corte de Nómina</h1>
         <?php
             echo "<b>Periodo de Corte: ".$periodo_actual."</b><br>";
         ?>

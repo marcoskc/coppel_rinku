@@ -38,7 +38,7 @@
        else $old_nombre=$_POST['nombre'];
 
        if($rol == 1 || $rol ==2){ 
-           $rol_radio1 = "";
+          $rol_radio1 = "";
           if($rol == 1) $rol_radio2 = "checked='true'";
           else $rol_radio3 = "checked='true'";
        }
@@ -90,7 +90,7 @@
 <html>
 
 <head>
-    <title>Administracion RINKU</title>
+    <title>Administración RINKU</title>
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
     <link rel="stylesheet" type="text/css" href="../css/alta_empleado.css" />
 </head>
@@ -109,7 +109,7 @@
                   <br><input type='text' name='nombre' style='width:400px; height:28px;' value='".$nombre."'></label><br>
                   <div id='line_decorativo'>___________________________________________________________________</div><br>
                   <b>Seleccione un rol de empleado:</b><br>
-                  <div>
+                  <div>&nbsp;
                         <input type='radio' id='chofer' name='rol' value='0' ".$rol_radio1.">
                         <label for='chofer'>Chofer</label><br>
                         <input type='radio' id='cargador' name='rol' value='1' ".$rol_radio2.">
@@ -119,9 +119,9 @@
                   </div>
                   <br>
                   <div id='line_decorativo'>___________________________________________________________________</div><br>
-                  <b>Seleccione un rol de empleado:</b>
+                  <b>Seleccione tipo de empleado:</b>
                   <br>
-                  <div>
+                  <div>&nbsp;
                       <input type='radio' id='interno' name='tipo' value='0' ".$tipo_radio1.">
                       <label for='interno'>Interno</label><br>
                       <input type='radio' id='externo' name='tipo' value='1' ".$tipo_radio2.">

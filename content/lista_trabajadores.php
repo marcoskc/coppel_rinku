@@ -38,7 +38,7 @@
 <html>
 
 <head>
-    <title>Administracion RINKU</title>
+    <title>Administración RINKU</title>
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
     <link rel="stylesheet" type="text/css" href="../css/lista_trabajadores.css" />
 </head>
@@ -62,15 +62,15 @@
 			            <input type='hidden' name='periodo' value='".$fecha_atras."'>
 						<input type='submit' value='<' style='width:25px; height:20px;'>
 			       </form></div>
-		           <div id='text_periodo'><b>Periodo: ".$periodo_actual."</b></div>
+		           <div id='text_periodo'><b>Período: ".$periodo_actual."</b></div>
 				   <div id='boton_adelante'><form method='post' action='' target='contenedor'>
 			            <input type='hidden' name='periodo' value='".$fecha_final."'>
 						<input type='submit' value='>' style='width:25px; height:20px;'>
 			       </form></div>";
 	?>
         <div id="style_pestania" style="background:#464646;  padding-top: 12px;">Lista de Empleados</div>
-        <form method='post' action='lista_movimientos.php' target="_self">
-            <button id="style_pestania" style="left:202px; cursor:pointer;" type='submit'>Bitacora Movimientos</button>
+        <form method='post' action='lista_movimiento.php' target="_self">
+            <button id="style_pestania" style="left:202px; cursor:pointer;" type='submit'>Bitácora Movimientos</button>
         </form>
         <form method='post' action='lista_cortes.php' target="_self">
             <button id="style_pestania" style="left:404px; cursor:pointer;" type='submit'>Corte de Nómina</button>
@@ -126,8 +126,8 @@
 					     <th>ok</th>						 
 						 <th> </th>
 						 <th> </th>
-                         <th>Numero</th>
-                         <th>Nombre</th>
+                         <th>Número</th>
+                         <th>Nombre de Empleado</th>
                          <th>Roles</th>
 						 <th>Tipo</th>	
 						 <th>Entregas</th>			 

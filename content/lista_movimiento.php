@@ -34,7 +34,7 @@
 <html>
 
 <head>
-    <title>Administracion RINKU</title>
+    <title>Administración RINKU</title>
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
     <link rel="stylesheet" type="text/css" href="../css/lista_trabajadores.css" />
 </head>
@@ -58,7 +58,7 @@
 					   <input type='hidden' name='periodo' value='".$fecha_atras."'>
 					   <input type='submit' value='<' style='width:25px; height:20px;'>
 				  </form></div>
-				  <div id='text_periodo'><b>Periodo: ".$periodo_actual."</b></div>
+				  <div id='text_periodo'><b>Período: ".$periodo_actual."</b></div>
 				  <div id='boton_adelante'><form method='post' action='' target='contenedor'>
 					   <input type='hidden' name='periodo' value='".$fecha_final."'>
 					   <input type='submit' value='>' style='width:25px; height:20px;'>
@@ -68,7 +68,7 @@
         <form method='post' action='lista_trabajadores.php' target="_self">
             <button id="style_pestania" style="left:0px;  cursor:pointer;" type='submit'>Lista de Empleados</button>
         </form>
-        <div id="style_pestania" style="background:#464646; left:202px; padding-top: 12px;">Bitacora Movimientos</div>
+        <div id="style_pestania" style="background:#464646; left:202px; padding-top: 12px;">Bitácora Movimientos</div>
         <form method='post' action='lista_cortes.php' target="_self">
             <button id="style_pestania" style="left:404px;  cursor:pointer;" type='submit'>Corte de Nómina</button>
         </form>
@@ -109,13 +109,13 @@
 
 			  // inicializando tabla de registros
               echo "<div id='impresion_box'><table id='contenedor_lista'>
-                      <tr style='background:#FFCCE6;'>						 
+                      <tr style='background:#FFCCE6;'>					 
 						 <th> </th>
 						 <th> </th>
 						 <th>Folio</th>
                          <th>Empleado</th>
-                         <th>Fecha</th>
-                         <th>Expedido</th>
+						 <th>Expedido</th>
+                         <th>Fecha Entrega</th>                        
 						 <th>Entregas</th>	
 						 <th>Turno</th>
 						 <th>Corte aplicado</th>
@@ -129,8 +129,8 @@
 						  $corte = "No";
 						  if($row['corte'] != 0){ 
 							  $corte = "Si";
-							  echo"<td style='width: 40px;'></td>
-							       <td style='width: 40px;'></td>";
+							  echo"<td style='width: 0px;'></td>
+							       <td style='width: 0px;'></td>";
 						  }
 						  else{
 							echo"<td style='width: 40px;'>
@@ -151,9 +151,9 @@
 						         </td>";
 						   }			  						       									
 						   echo " <td style='text-align: center;'><b>".$row['idmovimiento']."</b></td>							  
-						          <td><b>(".$row['numero_empleado'].") ".$row['Nombre']."</td>
-                                  <td style='text-align: center;'>".$row['Fecha']."</td>
+						          <td><b>(".$row['numero_empleado'].") ".$row['Nombre']."</td>                                  
 								  <td style='text-align: center;'>".$row['Expedido']."</td>
+								  <td style='text-align: center;'>".$row['Fecha']."</td>
 								  <td style='text-align: center;'><b>".$row['cantidad_entrega']."</b></td>	
 								  <td style='text-align: center;'>".$turno."</td>
 								  <td style='text-align: center;'>".$corte."</td>								 						  								 

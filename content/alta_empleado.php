@@ -83,7 +83,7 @@
             </div>
             <br>
             <div id="line_decorativo">___________________________________________________________________</div><br>
-            <b>Seleccione un rol de empleado:</b>
+            <b>Seleccione el tipo de empleado:</b>
             <br>
             <div>&nbsp;
                 <input type="radio" name="tipo" value="0" checked="true">

@@ -142,26 +142,40 @@
 
 						  // poner circulo azul si tiene moviemientos registrados y circulo rojo si no tiene movimientos
 						  if($row['corte'] != "0"){  
-							    if($row['registro'] != "0")  $circulo = "<div id='circulo_blue'><div>";
-								else $circulo = "<div id='circulo_red'><div>";	
+							    if($row['registro'] != "0"){  
+									$circulo = " <abbr title='El empleado ".$row['Nombre']." ya aplico corte de nómina en el periodo $periodo_actual'>
+									             <div id='circulo_blue'><div>
+												 </abbr>";
+								}
+								else $circulo = "<abbr title='El empleado ".$row['Nombre']." no tuvo entregas en todo el periodo $periodo_actual'>
+								                 <div id='circulo_red'><div>
+												 </abbr>";
 						  }
 						  else{ 								  
-								$circulo = "<div id='ajuste_renglon'><form method='post' action='alta_movimiento.php' target='contenedor'>
+								$circulo = "<abbr title='Registrar nueva bitácora de entrega para el empleado ".$row['Nombre']." periodo $periodo_actual'>
+								            <div id='ajuste_renglon'>
+											<form method='post' action='alta_movimiento.php' target='contenedor'>
 							                <input type='hidden' name='idempleado' value='".$row['idempleado']."'>
 											<input type='hidden' name='tipo_accion' value='LISTA_MOVIMIENTO'>
 							                <input style='width:19px' type='image' src='../resource/icono_01.png' alt='Submit'>
-						                    </form></div>";							  
+						                    </form>
+											</div>
+											</abbr>";							  
 						  }	
 						  
 						  echo "<tr>
 						          <td style='width: 40px;'>".$circulo."</td>
 								  <td style='width: 40px;'>
+								     <abbr title='Eliminar empleado ".$row['Nombre']."'>
 								     <div id='ajuste_renglon' onclick='confirmacion_delete_empleado(".$row['idempleado'].",\"".$row['Nombre']."\",\"".$row['numero_empleado']."\")'>
 									    <img style='width:19px' src='../resource/icono_04.png'>							       
 									 </div>
+									 </abbr>
 								  </td>
 								  <td style='width: 40px;'>
-								     <div id='ajuste_renglon'><form method='post' action='modificar_empleado.php' target='contenedor'>
+								     <abbr title='Modificar datos del empleado ".$row['Nombre']."'>
+								     <div id='ajuste_renglon'>
+									  <form method='post' action='modificar_empleado.php' target='contenedor'>
 									    <input type='hidden' name='idempleado' value='".$row['idempleado']."'>
 									    <input type='hidden' name='numero' value='".$row['numero_empleado']."'>
 									    <input type='hidden' name='nombre' value='".$row['Nombre']."'>
@@ -169,7 +183,9 @@
 									    <input type='hidden' name='tipo' value='".$row['Tipo']."'>
 						                <input type='hidden' name='tipo_accion' value='EDIT'>
 								   	    <input style='width:19px' type='image' src='../resource/icono_05.png' alt='Submit'>							       
-									 </form></div>
+									  </form>
+									 </div>
+									 </abbr>
 							      </td>								  
 						          <td style='text-align: center; width: 70px;'><b>".$row['numero_empleado']."</td>
                                   <td>".$row['Nombre']."</td>

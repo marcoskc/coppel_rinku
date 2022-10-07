@@ -134,11 +134,14 @@
 						  }
 						  else{
 							echo"<td style='width: 40px;'>
+							        <abbr title='Eliminar entrega de ".$row['Nombre']." folio ".$row['idmovimiento']."'>
 							        <div id='ajuste_renglon' onclick='confirmacion_delete_movimiento(".$row['idmovimiento'].",\"".$row['Nombre']."\",\"".$row['numero_empleado']."\")'>
 							            <img style='width:19px' src='../resource/icono_02.png'>							       
 						       	    </div>
+									</abbr>
 						         </td>
 						         <td style='width: 40px;'>
+								    <abbr title='Modificar entrega de ".$row['Nombre']." folio ".$row['idmovimiento']."'>
 							        <div id='ajuste_renglon'><form method='post' action='modificar_movimiento.php' target='contenedor'>
 							        <input type='hidden' name='idmovimiento' value='".$row['idmovimiento']."'>
 									<input type='hidden' name='idempleado' value='".$row['idempleado']."'>
@@ -148,6 +151,7 @@
 							        <input type='hidden' name='tipo_accion' value=''>	
 								    <input style='width:19px' type='image' src='../resource/icono_06.png' alt='Submit'>							       
 							        </form></div>
+									</abbr>
 						         </td>";
 						   }			  						       									
 						   echo " <td style='text-align: center;'><b>".$row['idmovimiento']."</b></td>							  
